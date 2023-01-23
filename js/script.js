@@ -52,7 +52,6 @@ function takeText(objetive) {
                 tempText = decrypt(inputText);
                 textToShow.textContent = tempText;
             }
-            textToShow.te;
             const buttonCopy = document.createElement("button");
             buttonCopy.classList.add("copy-button");
             const imgCopy = document.createElement("img");
@@ -69,7 +68,6 @@ function takeText(objetive) {
             sidebar.appendChild(buttonCopy);
 
             if (textToShow.offsetHeight >= 859) sidebar.style.height = "auto";
-            if (textToShow.offsetWidth >= 400) sidebar.style.width = "fit-content";
             sidebar.style.justifyContent = "space-between";
         }
     }
