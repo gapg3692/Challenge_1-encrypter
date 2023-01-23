@@ -5,15 +5,20 @@
 }
 
 body {
+    margin: 0px;
     background-color: #f3f5fc;
+    box-sizing: border-box;
 }
 
 .container,
 .information-text,
 .left-area,
 .alura-logo,
-.button-bar {
+.button-bar,
+.copy-button,
+.side-result-container {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .container {
@@ -22,7 +27,6 @@ body {
 }
 
 .left-area {
-    border: solid 1px;
     width: 70%;
     flex-direction: column;
 }
@@ -43,7 +47,19 @@ body {
 
 .input-text::placeholder,
 .input-text {
-    font-family: "Inter";
+    font-family: sans-serif;
+    font-style: normal;
+}
+
+.input-text::placeholder,
+.input-text,
+.info,
+.encrypt,
+.decrypt,
+.text-sidebar-caps,
+.text-sidebar-nothing,
+.text-sidebar,
+.copy-button {
     font-weight: 400;
     font-size: 32px;
     line-height: 150%;
@@ -71,8 +87,6 @@ body {
 }
 
 .info {
-    font-family: "Inter";
-    font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;
@@ -86,7 +100,6 @@ body {
 .button-bar {
     margin: 1rem 0 0 15rem;
     width: fit-content;
-    align-items: center;
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;
@@ -94,12 +107,11 @@ body {
 }
 
 .encrypt,
-.decrypt {
+.decrypt,
+.copy-button {
     width: 328px;
     height: 67px;
     border-radius: 24px;
-    font-family: "Inter";
-    font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 150%;
@@ -124,15 +136,103 @@ body {
 }
 
 .right-area {
-    border: solid 1px;
     width: 30%;
 }
 
-.side-resoult-container {
+.side-noText {
+    gap: 32px;
+}
+
+.img-sidebar {
+    width: 336px;
+    height: 304px;
+}
+
+.side-result-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 400px;
     height: 944px;
     margin: 10px 10px;
     background: #ffffff;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
+}
+
+.text-sidebar-caps {
+    color: black;
+    width: 400px;
+    height: 58px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    padding: 3px;
+    text-align: center;
+}
+
+.text-sidebar-nothing {
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    padding: 3px;
+    text-align: center;
+}
+
+.text-sidebar {
+    color: black;
+    width: 400px;
+    overflow-wrap: break-word;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 150%;
+    padding: 20px;
+}
+
+.copy-button {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    margin: 10px 0px;
+    border: 1px solid #0a3871;
+    text-align: center;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    color: #0a3871;
+    transition: all 0.3s ease-in-out;
+}
+
+.copy-button:hover {
+    background: #0a3871;
+    color: white;
+}
+
+.img-copy {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+}
+
+footer {
+    width: 100%;
+    height: 100%;
+    background-color: #0a3871;
+    padding: 1px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    font-family: sans-serif;
+    color: #d8dfe8;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    padding: 3px;
+    text-align: center;
 }
